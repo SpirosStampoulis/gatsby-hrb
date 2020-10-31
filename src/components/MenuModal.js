@@ -8,18 +8,26 @@ import SocialMenu from "./SocialMenu"
 const MenuModal = ({ isActive, toggleBackdrop }) => {
   const { wpMenu } = useStaticQuery(graphql`
     {
-      wpMenu(slug: { eq: "extended" }) {
-        name
-        menuItems {
-          nodes {
-            label
-            url
-            databaseId
-            connectedNode {
-              node {
-                ... on WpContentNode {
-                  uri
-                } 
+      allWpMenu {
+        nodes {
+          menuItems {
+            nodes {
+              label
+              locations
+              url
+              databaseId
+              menu {
+                node {
+                  slug
+                  name
+                }
+              }
+              connectedNode {
+                node {
+                  ... on WpPost {
+                    uri
+                  }
+                }
               }
             }
           }

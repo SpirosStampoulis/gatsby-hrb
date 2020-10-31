@@ -18,7 +18,7 @@ const Header = ({ pageContext, toggleBackdrop, ...props }) => {
     <header id="site-header" className="header-footer-group" role="banner">
       <div className="header-inner section-inner">
         <div className="header-titles-wrapper">
-          <div className="header-titles">
+          {/* <div className="header-titles">
             <h1 className="site-title">
               <Link
                 to="/"
@@ -32,7 +32,6 @@ const Header = ({ pageContext, toggleBackdrop, ...props }) => {
               }}
             />
           </div>
-
           <button
             className="toggle nav-toggle mobile-nav-toggle"
             data-toggle-target=".menu-modal"
@@ -47,13 +46,32 @@ const Header = ({ pageContext, toggleBackdrop, ...props }) => {
               </span>
               <span className="toggle-text">Menu</span>
             </span>
-          </button>
+          </button> */}
+          <header role="banner" id="page-header">
+            <div class="container">
+                <div class="region region-header">
+                    <section id="block-block-1" class="block block-block clearfix">
+                        <h1><a href="/">Horse Racing Betting USA</a></h1>
+                        <h3>Legal tracks wagering online for US players</h3>
+                    </section>
+                    <section id="block-search-form" class="block block-search clearfix">
+                        <form role="search" method="get" class="search-form form" action="/">
+                            <label for="form-search-input" class="sr-only">Search for</label>
+                            <div class="input-group">
+                                <input type="search" id="form-search-input" class="form-control search-field" placeholder="Search …" value="" name="s" title="Search for:"/>
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default blue-search-btn"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </header>
         </div>
-
         <div className="header-navigation-wrapper">
           <Menu />
-
-          <div className="header-toggles hide-no-js">
+          {/* <div className="header-toggles hide-no-js">
             <div className="toggle-wrapper nav-toggle-wrapper has-expanded-menu">
               <button
                 className="toggle nav-toggle desktop-nav-toggle"
@@ -71,7 +89,7 @@ const Header = ({ pageContext, toggleBackdrop, ...props }) => {
                 </span>
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

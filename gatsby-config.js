@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: process.env.WPGRAPHQL_URL,
+        url: `http://local.horseracingbettingusa.com/wp/graphql`,
         verbose: true,
         develop: {
           hardCacheMediaFiles: true,

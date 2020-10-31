@@ -5,7 +5,7 @@ import UniversalLink from "./UniversalLink"
 const Menu = () => {
   const { wpMenu } = useStaticQuery(graphql`
     {
-      wpMenu(slug: { eq: "primary" }) {
+      wpMenu(slug: {eq: "main-nav-drop"}) {
         name
         menuItems {
           nodes {
@@ -14,9 +14,22 @@ const Menu = () => {
             databaseId
             connectedNode {
               node {
-                ... on WpContentNode {
+                ... on WpCategory {
+                  id
                   uri
+                  taxonomy {
+                    node  {
+                      name
+                    }
+                  }
+                  name
                 }
+              }
+            }
+            childItems {
+              nodes {
+                label
+                url
               }
             }
           }

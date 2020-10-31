@@ -66,18 +66,25 @@ const SocialIcon = ({ label, ...props }) => {
 const SocialMenu = ({ isExpanded }) => {
   const { wpMenu } = useStaticQuery(graphql`
     {
-      wpMenu(slug: { eq: "social-links-menu" }) {
-        name
-        menuItems {
-          nodes {
-            label
-            url
-            target
-            databaseId
-            connectedNode {
-              node {
-                ... on WpContentNode {
-                  uri
+      allWpMenu {
+        nodes {
+          menuItems {
+            nodes {
+              label
+              locations
+              url
+              databaseId
+              menu {
+                node {
+                  slug
+                  name
+                }
+              }
+              connectedNode {
+                node {
+                  ... on WpPost {
+                    uri
+                  }
                 }
               }
             }
