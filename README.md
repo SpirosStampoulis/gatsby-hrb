@@ -29,7 +29,6 @@ Last tested with the following plugin versions.
       
 ## Limitations
 
-
 -  Comments are not implemented yet.
 -  The monthly archive pages are not implemented.
 -  Tags are not implemented (only Categories).
