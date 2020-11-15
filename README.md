@@ -46,3 +46,4 @@ Last tested with the following plugin versions.
 - [@TylerBarnes](https://github.com/TylerBarnes) - Head developer of gatsby-source-wordpress@v4
 - [@JasonBahl](https://github.com/jasonbahl) - Head developer of WPGraphQL
 - [@LouieChristie](https://github.com/louiechristie) - Open source contributor
+
